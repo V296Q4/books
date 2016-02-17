@@ -11,9 +11,22 @@
 |
 */
 
-Route::get('/', function(){
-	return 'Homepage';
-});
+
+Route::get('/', ['as' => 'Home', function () {
+    return view('welcome');
+}]);
+
+Route::get('attrs', 'AttributeController@show_all');
+
+Route::get('addattr', 'AttributeController@show_add');
+
+Route::get('updateattr/{id}', 'AttributeController@show_update');
+
+Route::get('delattr/{id}', 'AttributeController@del');
+
+Route::post('updateattr/{id}', ['as' => 'updateattr', 'uses'=>'AttributeController@do_update']);
+
+Route::post('addattr', ['as' => 'addattr', 'uses'=>'AttributeController@add']);
 
 Route::get('book/{id}', 'BookViewController@index');
 

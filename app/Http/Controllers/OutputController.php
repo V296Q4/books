@@ -15,10 +15,8 @@ class OutputController extends Controller {
 		
 		if(count($bookIds) > 0){
 			if(count($bookIds) == 1){
-				if(count($bookIds) == 1){
-					$returnUrl = $bookIds;
-					$bookIds = array($bookIds);
-				}
+				$returnUrl = $bookIds;
+				$bookIds = array($bookIds);
 			}
 			else{
 				$returnUrl = '/';
