@@ -5,5 +5,9 @@
 @stop
 
 @section('main_content')
-	<div>Homepage</div>
+	<div class="col-md-12">
+		<div class="jumbotron">
+			<h1>Homepage!</h1>
+		</div>
+	</div>
 @stop

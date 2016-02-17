@@ -61,14 +61,16 @@
 							</ul>
 						</li>
 					</ul>
-					
-					<form class="navbar-form navbar-left" role="search">
+
+					{{ Form::open(array('action' => array('SearchController@Search'), 'class' => 'navbar-form navbar-left')) }}
 						<div class="form-group">
-						  <input type="text" class="form-control" placeholder="Search">
+							<div>
+								<input class="form-control" type="text" name="input">
+							</div>
 						</div>
-						<button type="submit" class="btn btn-default">Submit</button>
+						<button type="submit" class="btn btn-default">Search</button>
 					</form>
-					
+			
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">username <span class="caret"></span></a>

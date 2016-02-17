@@ -34,6 +34,8 @@ Route::post('book/output', ['as' => 'Output', 'uses' => 'OutputController@Output
 
 Route::get('MultipleCheat', 'MultipleCheatController@index');
 
+Route::post('search', ['as' => 'Search', 'uses' => 'SearchController@Search']);
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
